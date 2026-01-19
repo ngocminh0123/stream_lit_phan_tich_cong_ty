@@ -1,0 +1,7 @@
+streamlit
+pandas
+os
+PIL
+matplotlib
+openpyxl
+numpy

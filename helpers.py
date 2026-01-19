@@ -4,8 +4,6 @@ import pandas as pd
 from PIL import Image
 from openpyxl.drawing.image import Image as XLImage
 import os
-import xlwings as ws
-import re
 import numpy as np
 
 # Hàm kiểm tra value có phải là năm hợp lệ không
