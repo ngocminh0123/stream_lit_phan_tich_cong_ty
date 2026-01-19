@@ -82,13 +82,20 @@ def plot_chart(label, folder_path, chart_type, x_col, y_col):
 def safe_div(a, b):
     return np.where(b == 0, np.nan, a / b)
 
-def render_chart_from_session_state(session_state_report, chart_folder_path):
+# def render_chart_from_session_state(session_state_report, chart_folder_path):
+#     for i, report in enumerate(session_state_report):
+#         chart_path = report["chart_path"]
+#         if chart_path.endswith(('.png', 'jpg', 'jpeg')):
+#             file_path = os.path.join(chart_folder_path, chart_path)
+
+#             image = Image.open(file_path)
+#             st.image(image, caption= chart_path, use_column_width=True)
+
+def render_chart_from_session_state(session_state_report):
     for i, report in enumerate(session_state_report):
         chart_path = report["chart_path"]
         if chart_path.endswith(('.png', 'jpg', 'jpeg')):
-            file_path = os.path.join(chart_folder_path, chart_path)
-
-            image = Image.open(file_path)
+            image = Image.open(chart_path)
             st.image(image, caption= chart_path, use_column_width=True)
 
 def calculate_financial_ratios(data, selected_years):

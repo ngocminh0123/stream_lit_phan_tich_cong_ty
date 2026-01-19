@@ -66,7 +66,8 @@ if file is not None:
         st.session_state.balance_sheet_report.append(bs_report)
         st.session_state.no += 1
 
-    render_chart_from_session_state(st.session_state.balance_sheet_report, chart_folder_path)
+    #render_chart_from_session_state(st.session_state.balance_sheet_report, chart_folder_path)
+    render_chart_from_session_state(st.session_state.balance_sheet_report)
         
     #Tính các chỉ tiêu cho phân tích cơ bản
     st.subheader("Phân tích tài chính từ dữ liệu")
@@ -124,7 +125,8 @@ if file is not None:
         st.session_state.ratio_report.append(ratio_report)
         st.session_state.no += 1
 
-    render_chart_from_session_state(st.session_state.ratio_report, chart_folder_path)
+    #render_chart_from_session_state(st.session_state.ratio_report, chart_folder_path)
+    render_chart_from_session_state(st.session_state.ratio_report)
 
     #Xuất tất cả biểu đồ ra file excel
     reports = [st.session_state.balance_sheet_report, st.session_state.ratio_report]
