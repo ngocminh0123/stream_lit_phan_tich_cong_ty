@@ -75,7 +75,8 @@ def plot_chart(label, folder_path, chart_type, x_col, y_col):
         chart_name = f"{chart_type}_of_{label.strip().replace(" ", "_")}.png"
         fig.savefig(f"./{folder_path}/{chart_name}")
 
-    return f"F:/CSDATA10Cybersoft/do_an_cuoi_khoa/{folder_path}/{chart_name}"
+    # return f"F:/CSDATA10Cybersoft/do_an_cuoi_khoa/{folder_path}/{chart_name}"
+    return os.path.join(folder_path, chart_name)
 
 def safe_div(a, b):
     return np.where(b == 0, np.nan, a / b)
